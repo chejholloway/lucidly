@@ -1,0 +1,19 @@
+$link-color: green;
+$primary-color: yellow;
+$primary-font: "'Consolas', 'Droid Sans Pro'";
+$secondary-font: "'Verdana', 'Droid Sans Pro'";
+$font-12: 12px;
+
+.header {
+  &__link {
+    color: $link-color;
+    text-decoration: none;
+	font-family: $primary-font;
+
+  	&__availablity, &__brand {
+	  font-family: $secondary-font;
+	  font-size: $font-12;
+	  color: $primary-color;
+  	}
+  }
+}

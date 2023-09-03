@@ -1,0 +1,34 @@
+$link-color: green;
+$primary-color: yellow;
+$secondary-color: blue;
+$primary-font: "'Consolas', 'Droid Sans Pro'";
+$secondary-font: "'Verdana', 'Droid Sans Pro'";
+$font-12: 12px;
+$font-14: 14px;
+
+.prices {
+  &__savings {
+    color: $link-color;
+    text-decoration: none;
+  	font-family: $primary-font;
+
+    &__title {
+    	font-family: $primary-font;
+    	font-size: $font-14;
+    	color: $link-color;
+	}
+	
+    &__link {
+    	font-family: $secondary-font;
+    	font-size: $font-12;
+    	color: $secondary-color;
+
+    	&-popup {
+      		font-family: $primary-font;
+      		font-size: $font-14;
+      		color: $secondary-color;
+      		text-decoration: none;
+        }
+      }    	
+	}
+}

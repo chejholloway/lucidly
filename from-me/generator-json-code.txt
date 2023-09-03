@@ -1,0 +1,36 @@
+[
+  {
+    'repeat(51)': {
+      product: {
+        imgSrc: 'http://placehold.it/150x150',
+        ImgTitle: '{{company().toUpperCase()}}',
+        atcButton: "Add to Compare",
+        stars: '{{integer(1, 5)}}',
+        customerReviews: '{{integer(40, 100)}}',
+        headerUrl: function (tags) {
+          return ('http://www.example.' + tags.domainZone()).toLowerCase();
+        },
+        headerName: '{{lorem(1, "words")}}',
+        headerBrand: '{{city()}}',
+        manufacturer: '{{lorem(1, "words")}}',
+        manufacturerNumber: '{{objectId}}',
+        skuId: '{{id}}',
+        highlights: [
+          {
+            'repeat(3)': '{{lorem(1, "sentences")}}'
+          }
+        ],
+        availability: 'Availability:',
+        inStock: '{{random(In Stock, Sold Out)}}',
+        orderNow: 'Order <strong>Now</strong> to Ship \n <strong>Tomorrow</strong>',
+        expedited: 'Free Expedited Shipping',
+        youPay: 'You Pay: ',
+        price: '{{floating(1000, 4000, 2, "$0,0.00")}}',
+        cartButton: 'Add to Cart',
+        dropDown: 'Add to Wishlist',
+        essential: 'Essential Kits'
+      }
+    }
+  }
+]
+

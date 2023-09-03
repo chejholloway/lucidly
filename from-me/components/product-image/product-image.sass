@@ -1,0 +1,41 @@
+$img-width: 150px;
+$img-height: 150px;
+$link-color: green;
+$primary-font: "'Consolas', 'Droid Sans Pro'";
+
+.image {
+  &__link {
+    &, &:hover, &:focus {
+      color: $link-color;
+      text-decoration: none;
+    }
+	
+	&__img {
+	  width: $img-width;
+	  height: $img-height;
+	}
+  }
+  
+  &__reviews {
+	&__link {
+	  color: $link-color;
+	  
+	  &__number {
+		font-family: $primary-font;
+		font-size: $font-14;
+      }
+	}
+	&__compare {
+	 color: $link-color;
+	 
+	 &__input {
+	   width: $img-width;
+	   height: $img-height;	 
+	 }
+	 &__text {
+	   font-family: $primary-font;
+	   font-size: $font-14;		
+	 }
+	}
+  }
+}

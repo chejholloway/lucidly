@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Lucid Works Code Challenge | Che' J. Holloway</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.2.4/gridlex.min.css">
+
+
+
+</head>
+
+<body>
+  <body ng-app="MyApp">
+  <div ng-controller="PaginationCtrl">
+    <div class="grid">
+      <product></product>
+        <div class="col-3">
+          <ul ng-repeat="item in itemsList">
+            <li>
+                <img ng-src="{{item.imgSrc}}"
+                    alt="{{item.imgTitle}}"
+                    title ="{{item.imgTitle}}"><br>
+
+                <div class="ratings-stars text-center" style="display: inline; padding-top: 7px;">
+                  <i class="fa fa-star fa-2x" style="color: gray"></i>
+                  <i class="fa fa-star fa-2x" style="color: gray"></i>
+                  <i class="fa fa-star fa-2x" style="color: gray"></i>
+                  <i class="fa fa-star fa-2x" style="color: gray"></i>
+                  <i class="fa fa-star fa-2x" style="color: gray"></i>
+                </div><br>
+                <a href="#" style="margin-top: 15px;" class="btn btn-default btn-lg active" role="button">
+                  <input type="checkbox" name="atc" value="checked"> {{item.atcButton}}
+                </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-3 clearfix" >
+          <ul ng-repeat="item in itemsList">
+            <li class="col-2">
+              <!-- HEADER -->
+              <a ng-href="{{item.headerUrl}}">
+                <h4>{{ item.headerName | uppercase }}<h4>
+                <h5>{{ item.headerBrand | uppercase }}<h5>
+              </a>
+              <span>{{ item.manufacturer }} #{{ item.skuId  | limitTo: 8 | uppercase }}<span>
+                <i class="fa fa-circle" style="font-size: 9px;"></i>
+              <span>MFR# {{ item.manufacturerNumber | limitTo:7 | uppercase }}<span><hr>
+              <h5>TOP HIGHLIGHTS</h5>
+              <ul ng-repeat="highlight in item.highlights">
+                <li>{{ highlight }}</li>
+              </ul><hr>
+
+              <div class="col-4">
+                <section class="col-2" style="height: 50px; border-right: 3px gray solid; float:left;">
+                  <h5>{{ item.availability }} : {{ item.inStock }}</h5>
+                </section>
+                <section calss="col-2" style="height: 50px;">
+                  <h5>
+                    Order <strong>Now</strong> to Ship<br>
+                    <strong>Tomorrow</strong><span style="padding-left: 5px; top: 2px;" class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+                  </h5>
+                </section>
+              </div>
+        </div>
+        <div class="col-3 clearfix">
+            <ul ng-repeat="item in itemsList">
+              <li class="col">
+                <a ng-href="{{ item.headerUrl }}">
+                  <h4>{{ item.headerName |uppercase }}<h4>
+                  <h5 >{{ item.headerBrand |uppercase }}<h5>
+                </a>
+                <span>{{ item.manufacturer }} #{{ item.skuId  | limitTo: 8 |uppercase }}<span>
+                  <i class="fa fa-circle" style="font-size: 9px;"></i>
+                <span>MFR# {{ item.manufacturerNumber | limitTo:7 | uppercase }}<span><hr>
+                <h5>TOP HIGHLIGHTS</h5>
+                <ul ng-repeat="highlight in item.highlights">
+                  <li>{{ highlight }}</li>
+                </ul><hr>
+                  <section class="col" style="height: 50px; border-right: 3px gray solid;">
+                    <h5>{{ item.availability }} : {{ item.inStock }}</h5>
+                  </section>
+                  <section calss="col" style="height: 50px;">
+                    <h5>
+                      Order <strong>Now</strong> to Ship<br><strong>Tomorrow</strong>
+                      <span style="padding-left: 5px; top: 2px;" class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>
+                    </h5>
+                  </section>
+              </li>
+            </ul>
+        </div>
+    </div>
+    <footer-component></footer-component>
+  </div>
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js'></script>
+<script
+			  src="http://code.jquery.com/jquery-3.1.1.slim.min.js"
+			  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+			  crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+    <script src="js/index.js"></script>
+    <script src="js/services/product.service.js"></script>
+    <script src="js/services/items-service.js"></script>
+
+</body>
+</html>

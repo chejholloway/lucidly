@@ -1,0 +1,63 @@
+<!-- Item desc Component Template -->
+  <section class="item__desc">
+    <!-- <item-desc-header></item-desc-header> -->
+    <header class="item__desc__header">
+      <a class="item__desc__header__link"
+          href="{{item,desc.header.url}}" itemprop="url">
+        <label class="item__desc__header__link__brand" itemprop="brand">{{item.brand}}</label>
+        <label  class="item__desc__header__link__name" itemprop="name">{{item.name}}</label>
+      </a>
+    </header><!--END  <item-desc-header></item-desc-header> -->
+
+<!-- <sku></sku> -->
+    <article class="item__desc__sku">
+      <label class="item__desc__sku__text">{{item.sku}}</label>
+      <p class="item__desc__mf">
+        <label class="item__desc__mf__text">{{item.mf}}</label>
+        <label class="item__desc__mf__number">{{item.mfNumber}}</label>
+      </p>
+    </article><!-- END <item-desc-sku></item-desc-sku> -->
+
+<!-- <highlights></highlights> -->
+    <article class="item__desc__highLights">
+      <section class="item__desc__highLights__sellingPoints">
+        <h4 class="item__desc__highLights__sellingPoints__title">{{item.highLights.sellingPoints.title}}</h4>
+        <ul class="item__desc__highLights__sellingPoints__list">
+          <li ng-repeat="item in items" class="item__desc__highLights__sellingPoints__listItem">
+            {{item.highLights.sellingPoints.listItem}}
+          </li>
+        </ul>
+      </section>
+    </article><!-- END <item-desc-highlights></item-desc-highlights> -->
+
+<!-- <additional-info></additional-info> -->
+    <article class="item__desc__addInfo">
+      <section class="item__desc__addInfo__comments">
+        <p class="item__desc___addInfo__comments_content">
+          <strong class="item__desc__addInfo__comments__content__availability">
+            {{item.desc.sales.comments.availability}}:
+          </strong>
+          <label class="item__desc__addInfo__comments__content__inStock">
+            {{item.desc.sales.comments.inStock}}
+          </label>
+        </p>
+      </section>
+      <section class="item__desc__addInfo__shippingTime" id="{{item.desc.additional.info.shipping.time.id}}">
+        <article class="item__desc__addInfo__shippingTime__content">
+          {{item.desc.addInfo.shippingTime.tme}}
+          <label class="item__desc__addInfo__shippingTime__content__helpQuestion" >
+            {{item.desc.addInfo.shippingTime.content.helpQuestion}}
+          </label>
+        </article>
+        <article class="item__desc__addInfo__shippingTime__popup" hidden>
+          <label class="item__desc__addInfo__shippingTime__popup__content">
+            {{item.desc.addInfo.shippingTime.popup.text}}
+          </label>
+        </article>
+        <article class="item__desc__addInfo__expedite">
+          <a class="item__desc__addInfo__expedite__link" href="{{{{item.desc.addInfo.expedite.url}}}}">
+            {{{{item.desc.addInfo.expedite.text}}}}
+          </a>
+        </article>
+  </section>
+  <!-- End of Item desc Component Template -->

@@ -1,0 +1,33 @@
+<section class="additional-info">
+  <!--additional info comments -->
+  <section class="additional-info__comments">
+    <p class="additional-info__comments_content">
+      <strong class="additional-info__comments__content__availability">
+        {{item.availability}}:
+      </strong>
+      <label class="additional-info__comments__content__in-stock">{{item.inStock}}
+      </label>
+    </p>
+  </section>
+  <!-- END additional info comments -->
+
+  <!--additional info shipping time -->
+  <section class="additional-info__shippingTime" id="{{additional.info.shipping.time.id}}">
+    <article class="additional-info__shippingTime__content">
+      {{additional-info.shippingTime.time}}
+      <label class="additional-info__shippingTime__content__helpQuestion" >
+        {{additional-info.shippingTime.content.helpQuestion}}
+      </label>
+    </article>
+    <article class="additional-info__shippingTime__popup-hidden" hidden>
+      <label class="additional-info__shippingTime__popup__text">
+        {{additional-info.shippingTime.popup.text}}
+      </label>
+    </article>
+    <article class="additional-info__expedite">
+      <a class="addInfo__expedite__link" href="{{{{addInfo.expedite.url}}}}">
+        {{{{item.expedite}}}}
+      </a>
+    </article>
+  </section><!-- END additional info shipping time -->
+</section>

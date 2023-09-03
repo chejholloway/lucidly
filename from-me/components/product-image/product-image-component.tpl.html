@@ -1,0 +1,18 @@
+  <!-- Image Component Template -->
+  <section class="item__image">
+    <a class="item__image__link" href="{{item.image.url}}" name="image">
+      <img class="item__link__image" alt="{{item.image.title}}"
+           title="{{item.image.title}}" height="{{item.image.height}}" itemprop="image"
+           src="{{item.image.srcUrl }}" width="{{item.image.width}}">
+    </a>
+    <article class="item__image__reviews">
+      <a class="item__image__reviews__link"
+         href="https://www.bhphotovideo.com/c/product/1110382-REG/canon_9779b001_powershot_sx530_hs_digital.html#customerReview">
+         <label>({{customeReviews: number}})</label>
+      </a>
+    </article>
+    <article class="item_image_compare">
+      <input class="item__image__compare__input" id="{{item.id}}" type="checkbox">
+    </article>
+  </section>
+  <!-- End of Item Image Component Template -->

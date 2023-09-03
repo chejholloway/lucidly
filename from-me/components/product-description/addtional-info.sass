@@ -1,0 +1,73 @@
+$img-width: 150px;
+$img-height: 150px;
+$content-width: 300px;
+$content-height: 300px;
+$link-color: green;
+$primary-color: yellow;
+$primary-font: "'Consolas', 'Droid Sans Pro'";
+$secondary-font: "'Consolas', 'Droid Sans Pro'";
+$font-14: 14px;
+$font-12: 12px;
+
+.additional-info {
+  &__comments {
+    color: $link-color;
+    text-decoration: none;
+
+  	&__content {
+  	  width: $content-width;
+  	  height: $content-height;
+  	  
+  	  &__availablity {
+  		font-family: $secondary-font;
+  		font-size: $font-12;
+  	  }
+  
+  	  &__in-stock {
+  		font-family: $primary-font;
+  		font-size: $font-14;
+  	  }	 	  
+  	}
+  }
+	
+  &__shipping-time {
+    color: $primary-color;
+    border: 5px $link-color solid;
+	
+  	&__content {
+  	  color: $link-color;
+  	  
+  	  &__help-question {
+  		font-family: $primary-font;
+  		font-size: $font-14;
+        }
+  	  
+  	  &__popup {
+  		font-family: $secondary-font;
+  		font-size: $font-12;
+  		
+    		&-isHidden {
+    		  display: none;
+    		  
+    			&__content {
+    			  font-family: $primary-font;
+    			  font-size: $font-14;
+    			}		  
+    		}
+      }
+  
+  	  &__expedite {
+  		  font-family: $secondary-font;
+  		  font-size: $font-12;
+  		
+    	  &__link {
+    		  font-family: $primary-font;
+    		  font-size: $font-14;
+          color: $link-color;
+    		  text-decoration: none;
+    		  
+  		  }		  
+      }	  
+  	}
+  }
+ }
